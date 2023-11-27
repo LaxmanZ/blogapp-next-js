@@ -1,14 +1,16 @@
+import Image from 'next/image';
 import React from 'react';
 
 const Author = ({ author }) => {
   return (
     <div className="text-center mt-20 mb-8 p-12 relative rounded-lg bg-black bg-opacity-20">
       <div className="absolute left-[45%] right-0 -top-14">
-        <img
+        <Image
           alt={author.name}
-          height="100px"
-          width="100px"
-          className="align-middle rounded-full"
+          unoptimized
+          height={100}
+          width={100}
+          className="align-middle rounded-full "
           src={author.photo.url}
         />
       </div>
